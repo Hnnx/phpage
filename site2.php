@@ -1,199 +1,215 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <meta charset="utf-8">
-  <title></title>
-  <style>
+  //Fonts
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-
-  body{
-    color: white;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  h1 { text-align:center; color: #BDB76B }
-  h5{ font-size: 20px; margin-left: 50px;}
-  input{ font-size:14px; }
-
-  .blank{
-    display: none;
-  }
-
-  .output{
-    font-family: consolas;
-    background-color:#BDB76B;
-    color:black;
-    font-size:15px;
-    padding: 10px;
-    display: inline-block;
-  }
-
-  .block1{
-    background-color: rgb(60, 60, 60);
-    padding: 10px;
-
-  }
-  .block2{
-    background-color: rgb(60, 70, 60);
-    padding: 10px;
-
-  }
-
-  </style>
+  //Style
+  <link rel="stylesheet" type="text/css" href="pageStyle.css">
+  <title>PHP Playground</title>
 </head>
 <body>
   <h1>PHP playground</h1>
-  <div class="blank">
+  <div class="block2">
+    <p style="text-align:center;font-size:20px;"><a href="site.php"><= BACK</a></p>
+  </div>
 
+  <div class="block1">
+    <h5>09) Associative Arrays (key:value)</h5>
 
-    <div class="block2">
-      <p style="text-align:center;font-size:20px;"><a style="color:white;text-decoration:none" href="site.php"><= BACK</a></p>
+    <p class="codeOutput">CODE</p>
+
+    <p class="code">
+      $grades = array('Jim' => "A", "John" => "B-", "Pam" => "F", "Oscar" => "C+"); <br>
+      echo $grades["Jim"]." ".$grades["Oscar"]; <br>
+    </p>
+    <br>
+    <p class="codeOutput">OUTPUT</p>
+    <div class="output">
+      <?php
+
+      $grades = array('Jim' => "A", "John" => "B-", "Pam" => "F", "Oscar" => "C+");
+      $grades["Pam"] = "A";
+      echo $grades["Jim"]." ".$grades["Oscar"];
+
+      ?>
     </div>
 
-    <div class="block1">
-      <h5>09) Associative Arrays (key:value)</h5>
+    <p class="codeOutput">CODE</p>
+    <p class="code">
 
-      <p>$grades = array('Jim' => "A", "John" => "B-", "Pam" => "F", "Oscar" => "C+"); <br> <br>
+      &lt;form action="site2.php" method="post"&gt;<br>
+      &nbsp;&nbsp;&lt;input type="text" name="studentName"&gt;<br>
+      &nbsp;&nbsp;&lt;button type="submit">Get Grade&lt;/button&gt;<br>
+      &lt;/form&gt;<br>
+      <br>
+      &lt;?php <br>
+      &nbsp;&nbsp;$shortVar = $_POST["studentName"];<br>
+      &nbsp;&nbsp;echo $shortVar." grade: ".$grades[$shortVar];<br>
+      ?&gt;
 
-        echo $grades["Jim"]." ".$grades["Oscar"]; <br><br>
-        Output: </p>
-        <div class="output">
-          <?php
+    </p>
 
-          $grades = array('Jim' => "A", "John" => "B-", "Pam" => "F", "Oscar" => "C+");
-          $grades["Pam"] = "A";
-          echo $grades["Jim"]." ".$grades["Oscar"];
+    <p class="codeOutput">OUTPUT</p>
+    <div class="output">
 
-          ?>
-        </div>
-        <br><br>
 
-        <form action="site2.php" method="post">
-          <input type="text" name="studentName">
-          <button type="submit">Get Grade</button>
-        </form>
 
-        <div class="output">
-          <?php
-          $shortVar = $_POST["studentName"];
-          echo $shortVar." grade: ".$grades[$shortVar];
-          ?>
-        </div>
+      <form action="site2.php" method="post">
+        Insert name: <input type="text" name="studentName">
+        <button type="submit">Get Grade</button>
+      </form>
+
+      <?php
+      $shortVar = $_POST["studentName"];
+      echo $shortVar." grade: ".$grades[$shortVar];
+      ?>
+    </div>
+  </div>
+  <div class="block2">
+    <h5>10) Functions</h5>
+
+    <p class="codeOutput">CODE</p>
+    <p class="code">
+      function sayHi($name, $age){<br>
+        &nbsp;echo "Hello $name , you are $age years old";<br>
+      }<br><br>
+      <br>
+      sayHi("Test",45);<br>
+      sayHi("Name",13);<br>
+      sayHi("John",60);<br>
+      sayHi("Mike",44);<br>
+    </p><br>
+
+    <p class="codeOutput">OUTPUT</p>
+
+
+    <div class="output">
+      <?php
+      function sayHi($name, $age){
+        echo "Hello $name , you are $age years old<br>";
+      }
+      sayHi("Test",45);
+      sayHi("Name",13);
+      sayHi("John",60);
+      sayHi("Mike",44);
+      ?>
+    </div>
+
+  </div>
+  <div class="block1">
+    <h5>11) Return function</h5>
+
+
+    <p class="code"><strong>//Get user input using</strong> <br>
+
+      $userInputNum = $_POST["num3"];<br><br>
+
+      <strong>//decalre functions multi3</strong><br>
+      function multi3($num){<br>
+        Return pow($num,3);<br>
+      }<br><br>
+      <strong>//return result</strong><br>
+      echo multi3($userInputNum);<br><br>
+
+      ?></p>
+      <br>
+      <form action="site2.php" method="post">
+        <input type="number" name="num3"><br>
+        <button type="submit">Triple</button><br>
+      </form>
+      <div class="output">
+
+
+        <?php
+        $userInputNum = $_POST["num3"];
+
+        function multi3($num){
+          echo "Result: ";
+          Return pow($num,3);
+        }
+        $res = multi3($userInputNum);
+        echo $res;
+
+        ?>
+
       </div>
-      <div class="block2">
-        <h5>10) Functions</h5>
 
-        <p>
-          function sayHi($name, $age){<br>
-            echo "Hello $name , you are $age years old";<br>
-          }<br><br>
-          <br>
-          sayHi("Test",45);<br>
-          sayHi("Name",13);<br>
-          sayHi("John",60);<br>
-          sayHi("Mike",44);<br>
+    </div>
+
+    <div class="block2">
+      <h5>12) If/else statements</h5>
+      <p><strong>Short/Male if/else</strong></p>
+
+      <p class="code">    $isMale = false;<br>
+        $isTall = true;<br>
+        <br>
+        if($isMale && $isTall){<br>
+          echo "You are a tall male";<br>
+        } elseif ($isMale && !$isTall) {<br>
+          echo "You are a short male";<br>
+        }<br><br>
+        elseif (!$isMale && $isTall) {<br>
+          echo "You are not male but are tall";<br>
+        }<br><br>
+        else {<br>
+          echo "You are not male";<br>
+        }</p><br>
+
+        <div class="output">
+
+          <?php
+          $isMale = false;
+          $isTall = true;
+
+          if($isMale && $isTall){
+            echo "You are a tall male";
+          } elseif ($isMale && !$isTall) {
+            echo "You are a short male";
+          }
+          elseif (!$isMale && $isTall) {
+            echo "You are not male but are tall";
+          }
+          else {
+            echo "You are not male";
+          }
+
+          ?>
+        </div>
+
+
+      </div>
+
+      <div class="block1">
+        <p><strong>Get max number </strong></p>
+
+        <p class="code">
+
+          $num1 = $_GET["num1"];<br>
+          $num2 = $_GET["num2"];<br>
+          $num3 = $_GET["num3"];<br>
+          <br><br>
+          function getMax($fNum, $sNum, $tNum){<br>
+            <br>
+            if($fNum > $sNum && $fNum > $tNum){<br>
+              return $fNum;<br>
+            }<br>
+            elseif ($sNum > $fNum && $sNum > $tNum) {<br>
+              return $sNum;<br>
+            } else{<br>
+              return $tNum;<br>
+            }<br>
+          }<br>
+
+          echo getMax($num1, $num2, $num3);<br>
+          ?><br>
+
         </p>
 
-        <div class="output">
-          <?php
-          function sayHi($name, $age){
-            echo "Hello $name , you are $age years old<br>";
-          }
-          sayHi("Test",45);
-          sayHi("Name",13);
-          sayHi("John",60);
-          sayHi("Mike",44);
-          ?>
-        </div>
-
-      </div>
-      <div class="block1">
-        <h5>11)Return function</h5>
 
 
-        <p><strong>//Get user input using</strong> <br>
-
-          $userInputNum = $_POST["num3"];<br><br>
-
-          <strong>//decalre functions multi3</strong><br>
-          function multi3($num){<br>
-            Return pow($num,3);<br>
-          }<br><br>
-          <strong>return result</strong><br>
-          echo multi3($userInputNum);<br><br>
-
-          ?></p>
-          <br>
-          <form action="site2.php" method="post">
-            <input type="number" name="num3"><br>
-            <button type="submit">Triple</button><br>
-          </form>
-          <div class="output">
-
-
-            <?php
-            $userInputNum = $_POST["num3"];
-
-            function multi3($num){
-              echo "Result: ";
-              Return pow($num,3);
-            }
-            $res = multi3($userInputNum);
-            echo $res;
-
-            ?>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="block2">
-        <h5>12) If/else statements</h5>
-        <strong>Short/Male if/else</strong>
-
-        <p>    $isMale = false;<br>
-            $isTall = true;<br>
-    <br>
-            if($isMale && $isTall){<br>
-              echo "You are a tall male";<br>
-            } elseif ($isMale && !$isTall) {<br>
-              echo "You are a short male";<br>
-            }<br><br>
-            elseif (!$isMale && $isTall) {<br>
-              echo "You are not male but are tall";<br>
-            }<br><br>
-            else {<br>
-              echo "You are not male";<br>
-            }</p>
-
-            <div class="output">
-
-            <?php
-              $isMale = false;
-              $isTall = true;
-
-              if($isMale && $isTall){
-                echo "You are a tall male";
-              } elseif ($isMale && !$isTall) {
-                echo "You are a short male";
-              }
-              elseif (!$isMale && $isTall) {
-                echo "You are not male but are tall";
-              }
-              else {
-                echo "You are not male";
-              }
-
-              ?>
-            </div>
-
-
-      </div>
-
-      <div class="block1">
-        <strong>Get max number: </strong>
         <form action="site2.php" method="GET">
           Input 3 numbers:<br>
           <input type="number" name="num1" min="0" max="999999"><input type="number" name="num2" min="0" max="999999"><input type="number" name="num3" min="0" max="999999">
@@ -228,6 +244,25 @@
 
         <p>using type="number" and step="0.001" to accept decimal </p>
 
+        <p class="code">
+
+
+          if( $op == "plus" || $op == "+"){<br>
+            echo $num1 + $num2;<br>
+          } else if($op == "minus" || $op == "-"){<br>
+            echo $num1 - $num2;<br>
+          } else if($op == "multiply" || $op == "*"){<br>
+            echo $num1 * $num2;<br>
+          } else if($op == "divide" || $op == "/"){<br>
+            echo $num1 / $num2;<br>
+          } else if($op == "remainder" || $op == "%"){<br>
+            echo $num1 % $num2;<br>
+          } else {<br>
+            echo "select an operand";<br>
+          }
+
+        </p>
+
         <form action="site2.php" method="GET">
           <input type="number" step="0.001" name="calcNum1" min="0" max="999">
           <select name="operands">
@@ -239,6 +274,7 @@
           <input type="number" step="0.001" name="calcNum2" min="0" max="999">
           <button type="submit">CALC</button>
         </form>
+
         <div class="output">
           <?php
 
@@ -261,18 +297,211 @@
             echo "select an operand";
           }
 
-
-
-           ?>
+          ?>
         </div>
 
       </div>
 
 
-      <div class="block1">
-        <p style="text-align:center;font-size:20px;"><a style="color:white;text-decoration:none" href="site3.php">NEXT PAGE =></a></p>
+    </div>
+    <div class="block1">
+      <h5>14) Switch case</h5>
+
+      <p class="code">
+
+        $grade = $_GET["grade"];<br>
+        <br>
+        switch($grade){<br>
+          <br>
+          case "A+":<br>
+          echo "You did great!";<br>
+          break;<br>
+          case "A":<br>
+          echo "You did very good";<br>
+          break;<br>
+          case "B":<br>
+          echo "You did good";<br>
+          break;<br>
+          case "C":<br>
+          echo "You did ok";<br>
+          break;<br>
+          case "D":<br>
+          echo "You didn't do good";<br>
+          break;<br>
+          case "F":<br>
+          echo "You failed :(";<br>
+          break;<br>
+          default:<br>
+          echo "Please enter A+,A,B,C,D or F";<br>
+        }</p>
+
+        <p><strong>What was your grade?</strong></p>
+        <p>Option 1: Using Input Tag</p>
+
+        <form action="site2.php" method="GET">
+          <input type="text" name="grade" size="2"> <button type="submit">Submit</button>
+        </form> <br>
+
+
+        <div class="output">
+          <?php
+
+          $grade = $_GET["grade"];
+
+          switch($grade){
+
+            case "A+":
+            echo "You did great!";
+            break;
+            case "A":
+            echo "You did very good";
+            break;
+            case "B":
+            echo "You did good";
+            break;
+            case "C":
+            echo "You did ok";
+            break;
+            case "D":
+            echo "You didn't do good";
+            break;
+            case "F":
+            echo "You failed :(";
+            break;
+            default:
+            echo "Please enter A+,A,B,C,D or F";
+          }
+          ?>
+        </div>
+
+        <p>Option 2: Using select Tag</p>
+        <form action="site2.php" method="GET">
+          <select name="grd">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+          </select>
+          <button type="submit">Submit</button>
+        </form>
+
+        <div class="output">
+
+          <?php
+
+          $grade = $_GET["grd"];
+
+          switch($grade){
+
+            case "A+":
+            echo "You did great!";
+            break;
+            case "A":
+            echo "You did very good";
+            break;
+            case "B":
+            echo "You did good";
+            break;
+            case "C":
+            echo "You did ok";
+            break;
+            case "D":
+            echo "You didn't do good";
+            break;
+            case "F":
+            echo "You failed :(";
+            break;
+            default:
+            echo "Please enter A+,A,B,C,D or F";
+          }
+
+          ?>
+        </div>
       </div>
 
+      <div class="block2">
+        <h5>15) Basic Loops</h5>
 
-    </body>
-    </html>
+        <h3>WHILE</h3>
+        <p class="code">
+          $index = 1;<br>
+          while($index <= 4 ){<br>
+            echo $index.") String  &lt;br&gt; ";<br>
+            $index++;<br>
+          }
+
+        </p><br>
+
+        <div class="output">
+          <?php
+          $index = 1;
+          while($index <= 4 ){
+            echo "$index) String  <br>";
+            $index++;
+          }
+          ?>
+
+        </div>
+        <br>
+        <h3>FOR</h3>
+        <p class="code">  for ($i=0; $i < 15; $i++) {<br>
+          echo "$i ";</p>
+          <br>
+          <div class="output">
+            <?php
+            for ($i=0; $i < 15; $i++) {
+              echo "$i ";
+            }
+
+            ?>
+          </div>
+
+          <h3>ARRAY LOOP</h3>
+
+          <p class="code">
+            $randomNums = array(4,23,6,4,8,1,9,12,99,123);<br>
+            <br>
+            for ($i=0; $i < count($randomNums); $i++) {<br>
+              echo "$randomNums[$i] ";<br>
+            }<br><br>
+            for ($i=count($randomNums) ; $i > 0; $i-- ) {<br>
+              echo "$randomNums[$i] ";<br>
+            }<br>
+            <br>
+            for ($i=0; $i < count($randomNums) ; $i+=2) {<br>
+              echo "$randomNums[$i] ";<br>
+            }</p><br>
+
+            <div class="output">
+
+              <?php
+
+              $randomNums = array(4,23,6,4,8,1,9,12,99,123);
+
+              for ($i=0; $i < count($randomNums); $i++) {
+                echo "$randomNums[$i] ";
+              }
+              echo "<p>Reverse Array: <p>";
+                for ($i=count($randomNums) ; $i > 0; $i-- ) {
+                  echo "$randomNums[$i] ";
+                }
+
+                echo "<p>Every 2nd element from Array: <p>";
+
+                  for ($i=0; $i < count($randomNums) ; $i+=2) {
+                    echo "$randomNums[$i] ";
+                  }
+                  ?>
+
+                </div>
+              </div>
+
+              <div class="block1">
+                <p style="text-align:center;font-size:20px;"><a href="site3.php">NEXT PAGE =></a></p>
+              </div>
+
+
+            </body>
+            </html>

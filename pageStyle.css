@@ -1,0 +1,77 @@
+body{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  text-align:center;
+  color: #BDB76B;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 3rem;
+}
+h5{ font-size: 20px; margin-left: 50px; font-family: 'Share Tech Mono', monospace;}
+input{ font-size:14px; }
+
+.blank{
+  //display: none;
+}
+
+a{
+  font-family: 'Share Tech Mono', monospace;
+  transition-duration: 0.4s;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  color: red;
+}
+
+.output{
+  font-family: consolas;
+  background-color:#BDB76B;
+  color:black;
+  font-size:15px;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+button {
+  transition-duration: 0.4s;
+  font-family: consolas;
+}
+
+button:hover {
+  background-color: rgb(60, 70, 60);
+  color: white;
+}
+
+.code{
+  line-height: 130%;
+  display: inline-block;
+  padding: 10px;
+  background-color: rgb(253,245,230);
+  color: black;
+  font-family: consolas;
+  border-radius: 5px;
+}
+
+.block1{
+  background-color: rgb(60, 60, 60);
+  padding: 10px;
+
+}
+.block2{
+  background-color: rgb(60, 70, 60);
+  padding: 10px;
+
+}
+
+
+.codeOutput{
+  font-family: 'Share Tech Mono', monospace;
+  font-style: italic;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
