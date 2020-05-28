@@ -502,6 +502,7 @@
                 <p style="text-align:center;font-size:20px;"><a href="site3.php">NEXT PAGE =></a></p>
               </div>
 
+              <?php include "footer.html" ?>
 
             </body>
             </html>

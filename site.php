@@ -11,7 +11,7 @@
   <title>PHP Playground</title>
 </head>
 <body>
-  <h1>PHP PLAYGROUND</h1>
+  <?php include "header.html" ?>
   <div class="block1">
     <h5>00) Variables</h5>
 
@@ -392,6 +392,8 @@
   <div class="block2">
     <p style="text-align:center;font-size:20px;"><a href="site2.php">NEXT PAGE =></a></p>
   </div>
+
+  <?php include "footer.html" ?>
 
 
 

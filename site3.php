@@ -11,7 +11,7 @@
   <title>PHP Playground</title>
 </head>
 <body>
-  <h1>PHP playground</h1>
+  <?php include "header.html" ?>
   <div class="block2">
     <p style="text-align:center;font-size:20px;"><a href="site2.php"><= BACK</a></p>
   </div>
@@ -20,13 +20,9 @@
 
 
 
-
-
-
-
-
   <div class="block1">
     <p style="text-align:center;font-size:20px;"><a href="site4.php">NEXT PAGE =></a></p>
   </div>
+  <?php include "footer.html" ?>
 </body>
 </html>
