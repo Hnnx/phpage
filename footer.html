@@ -1,19 +1,18 @@
 <style>
-footer{
-  background-color:black;
-  margin:0px;
-  padding:15px;
-  font-family: 'Share Tech Mono', monospace;
-}
-
-
-#name{
-  transition-duration:.5s;
-
-}
-#name:hover{
-    font-size:25px;
-}
+  footer{
+    background-color:black;
+    color:white;
+    margin:0px;
+    padding:15px;
+    font-family: 'Share Tech Mono', monospace;
+  }
+  #name{transition-duration:.5s;}
+  #name:hover{font-size:25px;}
+  span{color:red;}
 </style>
 
-<footer> <p>Made with <span style="color:red;"><3</span> by <a id="name" href="#">HNNX</a></p></footer>
+
+
+<footer>
+  <p><?php echo "$made"; ?> with <span> <?php echo "$stuff"; ?> </span> by <a id="name" href="https://github.com/Hnnx">HNNX</a>. <?php echo "$date"; ?> </p>
+</footer>
