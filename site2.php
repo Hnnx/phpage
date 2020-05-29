@@ -484,69 +484,102 @@
                 echo "$randomNums[$i] ";
               }
               echo "<p>Reverse Array: <p>";
-              for ($i=count($randomNums) ; $i > 0; $i-- ) {
-                echo "$randomNums[$i] ";
-              }
+                for ($i=count($randomNums) ; $i > 0; $i-- ) {
+                  echo "$randomNums[$i] ";
+                }
 
-              echo "<p>Every 2nd element from Array: <p>";
+                echo "<p>Every 2nd element from Array: <p>";
 
-              for ($i=0; $i < count($randomNums) ; $i+=2) {
-                echo "$randomNums[$i] ";
-              }
-              ?>
+                  for ($i=0; $i < count($randomNums) ; $i+=2) {
+                    echo "$randomNums[$i] ";
+                  }
+                  ?>
 
-            </div>
-          </div>
-          <div class="block1">
+                </div>
+              </div>
+              <div class="block1">
 
-            <h5>16) Using include</h5>
+                <h5>16) Using include</h5>
 
 
-            <p class="codeOutput">CODE</p>
-            <p class="code">
+                <p class="codeOutput">CODE</p>
+                <p class="code">
 
-              //<strong>external file footer.html</strong> <br>
-              <br>
-              &lt;style&gt;<br>
-                &nbsp;&nbsp;footer{<br>
-                  &nbsp;&nbsp;color:white;<br>
-                  &nbsp;&nbsp;background-color:black;<br>
-                  &nbsp;&nbsp;margin:0px;<br>
-                  &nbsp;&nbsp;padding:15px;<br>
-                  &nbsp;&nbsp;font-family: 'Share Tech Mono', monospace;<br>
-                }<br>
-                #name{transition-duration:.5s;}<br>
-                #name:hover{font-size:25px;}<br>
-              &lt;/style&gt;<br>
-              &lt;footer&gt;<br>
-                &nbsp;&nbsp;&lt;p&gt;Made with &lt;span&gt; <strong>&lt;?php echo "$stuff" ?&gt;</strong> &lt;/span&gt; by &lt;a id="name" href="https://github.com/Hnnx">HNNX&lt;/a&gt;&lt;/p&gt;<br>
-              &lt;/footer&gt;<br><br>
-              <strong>//php include statement</strong><br>
-              &lt;?php <br>
-              $made = "Created";<br>
-              $stuff = "love";<br>
-              date = 2020;<br>
-              include "footer.html"<br>
-               ?&gt;
-            </p>
+                  //<strong>external file footer.html</strong> <br>
+                  <br>
+                  &lt;style&gt;<br>
+                  &nbsp;&nbsp;footer{<br>
+                    &nbsp;&nbsp;color:white;<br>
+                    &nbsp;&nbsp;background-color:black;<br>
+                    &nbsp;&nbsp;margin:0px;<br>
+                    &nbsp;&nbsp;padding:15px;<br>
+                    &nbsp;&nbsp;font-family: 'Share Tech Mono', monospace;<br>
+                  }<br>
+                  #name{transition-duration:.5s;}<br>
+                  #name:hover{font-size:25px;}<br>
+                  &lt;/style&gt;<br>
+                  &lt;footer&gt;<br>
+                  &nbsp;&nbsp;&lt;p&gt;Made with &lt;span&gt; <strong>&lt;?php echo "$stuff" ?&gt;</strong> &lt;/span&gt; by &lt;a id="name" href="https://github.com/Hnnx">HNNX&lt;/a&gt;&lt;/p&gt;<br>
+                  &lt;/footer&gt;<br><br>
+                  <strong>//php include statement</strong><br>
+                  &lt;?php <br>
+                  $made = "Created";<br>
+                  $stuff = "love";<br>
+                  date = 2020;<br>
+                  include "footer.html"<br>
+                  ?&gt;
+                </p>
 
-            <p class="codeOutput">OUTPUT</p>
-            <div class="output">
+                <p class="codeOutput">OUTPUT</p>
+                <div class="output">
 
-              <?php
-              $made = "Created";
-              $stuff = "<3";
-              $date = 2020;
-              include "footer.html";
-               ?>
+                  <?php
+                  $made = "Created";
+                  $stuff = "<3";
+                  $date = 2020;
+                  include "footer.html";
+                  ?>
 
-            </div>
+                </div>
 
-            </div>
 
-          </div>
+                <p>Works with functions as well:</p>
 
-          <?php include "footer.html" ?>
+                <p class="codeOutput">CODE</p>
+                <p class="code">
+                  <strong>//function in phpFunc.php</strong><br>
+                  &lt;?php <br>
+                  function pal($String){<br>
+                    $strToArray = str_split($String);<br>
+                    <br>
+                    for ($i=count($strToArray); $i >= 0; $i--) {<br>
+                      &nbsp;&nbsp;echo "$strToArray[$i]";<br>
+                      &nbsp;}<br>
+                    }<br>
+                    ?&gt;<br>
+                    <br>
+                    <strong>//include in site2.php</strong><br>
+                    &lt;?php <br>
+                    <br>
+                    include "phpFunc.php";<br>
+                    pal("ZEMSOOON");<br>
+                    ?&gt;<br>
+                  </p>
+                  <br>
+                  <p class="codeOutput">OUTPUT</p>
+                  <div class="output">
 
-        </body>
-        </html>
+                    <?php
+
+                    include "phpFunc.php";
+                    pal("ZEMSOOON");
+                    ?>
+                  </div>
+
+                </div>
+
+
+                <?php include "footer.html" ?>
+
+              </body>
+              </html>
