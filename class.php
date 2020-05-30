@@ -173,7 +173,130 @@
         </div>
 
         <div class="block2">
-          fsdfds
+
+          <h5>18) Getter / Setter </h5>
+          <p class="codeOutput">CODE</p>
+          <p class="code">
+
+            class Movie{<br>
+              &nbsp;&nbsp;rivate $title;<br>
+              &nbsp;&nbsp;private $rating;<br>
+<br>
+              function __construct($title, $rating){<br>
+                &nbsp;&nbsp;$this->title = $title;<br>
+                <strong>&nbsp;&nbsp;$this->setRating($rating);</strong><span class="grayed-out">  //Prevents wrong input from constructor</span><br>
+              }<br><br>
+              <strong>//Getter</strong><br>
+              function getRating(){<br>
+                &nbsp;&nbsp;return $this->rating;<br>
+              }<br>
+<br><br>
+              <strong>//Setter</strong><br>
+              function setRating($rating){<br>
+<br>
+                &nbsp;if($rating == "G" || $rating == "PG" || $rating == "PG-13"|| $rating == "PG-13" || $rating == "R")<br>
+                  &nbsp;&nbsp;$this->rating = $rating;<br>
+                &nbsp;else<br>
+                  &nbsp;&nbsp;$this->rating = "NR";<br>
+<br>
+              &nbsp;}<br>
+            }<br><br>
+            $avengers = new Movie("Avengers", "fdsfds");<span class="grayed-out">//fdsfds will be replaced with NR</span>  <br>
+            $avengers->setRating("MEOW");<span class="grayed-out">//MEOW will be replaced with NR</span><br>
+<br>
+            echo "Movie Rating : ";<br>
+            echo $avengers->getRating();<br><br>
+            $avengers->setRating("PG");<span class="grayed-out">//PG will be passed as a valid parameter</span><br>
+            echo "Movie Rating : ";<br>
+            echo $avengers->getRating();<br>
+          </p>
+
+          <p class="codeOutput">OUTPUT</p>
+          <div class="output">
+            <?php
+            class Movie{
+              private $title;
+              private $rating;
+
+              function __construct($title, $rating){
+                $this->title = $title;
+                $this->setRating($rating);
+              }
+              //Getter
+              function getRating(){
+                return $this->rating;
+              }
+
+              //Setter
+              function setRating($rating){
+                if($rating == "G" || $rating == "PG" || $rating == "PG-13"|| $rating == "PG-13" || $rating == "R")
+                  $this->rating = $rating;
+                else
+                  $this->rating = "NR";
+              }
+
+              function getTitle(){
+                return $this->title;
+              }
+
+              function setTitle($title){
+
+                $this->title = $title;
+
+              }
+
+            }//ENDCLASS
+            $avengers = new Movie("Avengers", "fdsfds");
+            $avengers->setRating("MEOW");
+            echo "Movie Rating : ";
+            echo $avengers->getRating();
+
+            echo "<br><br>";
+            $avengers->setRating("PG");
+            echo "Movie Rating : ";
+            echo $avengers->getRating();
+
+
+             ?>
+          </div>
+
+        </div>
+
+        <div class="block1">
+          <h5>19) Inheritance</h5>
+          <p class="codeOutput">CODE</p>
+          <p class="code">
+
+
+          </p>
+          <p class="codeOutput">OUTPUT</p>
+          <div class="output">
+
+            <?php
+            class Chef {
+
+              function makeChicken(){
+                echo "The chef makes chicken<br>";
+              }
+
+              function makeSalad(){
+                echo "The chef makes Salad<br>";
+              }
+
+              function makeSpecialDish(){
+                echo "The chef makes special dish<br>";
+              }
+
+
+            }
+            $chef = new Chef();
+            $chef->makeChicken();
+
+
+             ?>
+
+          </div>
+
 
         </div>
 
