@@ -1,23 +1,28 @@
 body{
   color: white;
   font-family: 'Roboto', sans-serif;
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
 }
 
 h1 {
   text-align:center;
   color: #BDB76B;
-  font-family: 'Share Tech Mono', monospace;
   font-size: 3rem;
+  margin: 7px;
 }
-h5{ font-size: 20px; margin-left: 50px; font-family: 'Share Tech Mono', monospace;}
+h5{ font-size: 20px; margin-left: 50px;color: #BDB76B;}
 input{ font-size:14px; }
 
+#header3{  text-align: center;  color: white;  margin-bottom: 20px; margin-top: 0px;}
+
 .blank{
-  //display: none;
+  display: none;
 }
 
 a{
-  font-family: 'Share Tech Mono', monospace;
   transition-duration: 0.4s;
   color: white;
   text-decoration: none;

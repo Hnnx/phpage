@@ -2,19 +2,22 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  //Fonts
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-  //Style
+  <!-- Style -->
   <link rel="stylesheet" type="text/css" href="pageStyle.css">
   <title>PHP Playground</title>
 </head>
 <body>
-  <h1>PHP playground</h1>
-  <div class="block2">
-    <p style="text-align:center;font-size:20px;"><a href="site.php"><= BACK</a></p>
-  </div>
+    <?php
+
+  $partNum = 2;
+  $partTitle = "Arrays, Loops, Functions";
+
+  include "header.html"
+  ?>
 
   <div class="block1">
     <h5>09) Associative Arrays (key:value)</h5>
@@ -578,7 +581,9 @@
 
                 </div>
 
-
+                <div class="block2">
+                  <p style="text-align:center;font-size:20px;"><a href="site.php">BACK</a></p>
+                </div>
                 <?php include "footer.html" ?>
 
               </body>
