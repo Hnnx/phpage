@@ -396,13 +396,14 @@
     </div>
   </div>
 
-  <div class="block2">
-    <p style="text-align:center;font-size:20px;"><a href="site2.php">NEXT PAGE</a></p>
-  </div>
-
   <?php
-  $made ="Developed";
-  $stuff = "Atom";
+  $blockX = "block1";
+
+  $linkBack = "#";
+  $linkNext = "site2.php";
+
+  $made = "Created";
+  $stuff = "love";
   include "footer.html" ?>
 
 

@@ -1,18 +1,19 @@
-<style>
-  footer{
-    background-color:black;
-    color:white;
-    margin:0px;
-    padding:15px;
-    font-family: 'Share Tech Mono', monospace;
-  }
-  #name{transition-duration:.5s;}
-  #name:hover{font-size:25px;}
-  span{color:red;}
-</style>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="pageStyle.css" type="text/css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
 
+    <div class="<?php echo $blockX ?>">
+      <p class="link"><a href="<?php echo $linkBack ?>">BACK</a>  ||  <a href="<?php echo $linkNext ?>">NEXT</a></p>
+    </div>
 
+    <footer>
+      <p><?php echo "$made"; ?> with <span> <?php echo "$stuff"; ?> </span> by <a id="name" href="https://github.com/Hnnx">HNNX</a>. <?php echo "$date"; ?> </p>
+    </footer>
 
-<footer>
-  <p><?php echo "$made"; ?> with <span> <?php echo "$stuff"; ?> </span> by <a id="name" href="https://github.com/Hnnx">HNNX</a>. <?php echo "$date"; ?> </p>
-</footer>
+  </body>
+</html>
