@@ -266,7 +266,39 @@
           <h5>19) Inheritance</h5>
           <p class="codeOutput">CODE</p>
           <p class="code">
-
+            class Chef {<br>
+              function makeChicken(){<br>
+                &nbsp;&nbsp;echo "The chef makes chicken&lt;br&gt;";<br>
+              }<br>
+<br>
+              function makeSalad(){<br>
+                &nbsp;&nbsp;echo "The chef makes Salad&lt;br&gt;";<br>
+              }<br>
+<br>
+              function makeSpecialDish(){<br>
+                &nbsp;&nbsp;echo "The chef makes ribs&lt;br&gt;";<br>
+              &nbsp;}<br>
+            }<br>
+<br>
+            class italianChef extends Chef {<br>
+<br>
+              &nbsp;function makePasta(){<br>
+                &nbsp;&nbsp;echo "The chef makes pasta&lt;br&gt;";<br>
+              &nbsp;}<br>
+<br>
+              function makeSpecialDish(){<br>
+                &nbsp;&nbsp;echo "The chef makes pizza&lt;br&gt;";<br>
+              &nbsp;}<br>
+            }<br>
+<br>
+            $chef = new Chef();<br>
+            $itaChef = new italianChef();<br>
+<br>
+            $chef->makeChicken();<br>
+            $itaChef->makeSalad();<br>
+            $itaChef->makePasta();<br>
+            $itaChef->makeSpecialDish();<br>
+            $chef->makeSpecialDish();<br>
 
           </p>
           <p class="codeOutput">OUTPUT</p>
@@ -274,7 +306,6 @@
 
             <?php
             class Chef {
-
               function makeChicken(){
                 echo "The chef makes chicken<br>";
               }
@@ -284,14 +315,29 @@
               }
 
               function makeSpecialDish(){
-                echo "The chef makes special dish<br>";
+                echo "The chef makes ribs<br>";
+              }
+            }
+
+            class italianChef extends Chef {
+
+              function makePasta(){
+                echo "The chef makes pasta<br>";
               }
 
-
+              function makeSpecialDish(){
+                echo "The chef makes pizza<br>";
+              }
             }
-            $chef = new Chef();
-            $chef->makeChicken();
 
+            $chef = new Chef();
+            $itaChef = new italianChef();
+
+            $chef->makeChicken();
+            $itaChef->makeSalad();
+            $itaChef->makePasta();
+            $itaChef->makeSpecialDish();
+            $chef->makeSpecialDish();
 
              ?>
 
@@ -304,7 +350,7 @@
         $blockX = "block2";
 
         $linkBack = "site2.php";
-        $linkNext = "#";
+        $linkNext = "phptut.php";
 
         $made = "Coded";
         $stuff = "love";
