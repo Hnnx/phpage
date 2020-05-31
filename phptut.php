@@ -102,6 +102,102 @@ $fName = "Pajo";
   echo "Constant: ". NONMUTABLE;
 
 
+  echo "<br>";echo "<br>";
+  echo "Constant Array:";
+  echo "<br>";
+
+  define("books", ["myBook","secondBook", "Bookie"]);
+
+  echo books[2];
+
+  echo "<br>";echo "<br>";
+
+
+  echo $vpis = (empty($uName)) ? "log in" : "welcome, $uName";
+
+  $uName = "Henrik";
+  echo "<br>";echo "<br>";
+  date_default_timezone_set('Europe/Rome');
+
+  echo $vpis = (empty($uName)) ? "log in" : "welcome, $uName";
+  echo "<br><p>Time</p>";
+  echo date("D, d M Y H:i:s");
+  echo "<br><br>";
+
+  function whatTime(){
+
+    if(date("G") >= 6 && date("G") < 12){
+      echo "Good morning, it's ".date("G:i");
+    }
+    elseif(date("G") >= 12 && date("G") < 19){
+      echo "Good afternoon, it's ".date("G:i");
+    }elseif(date("G") >= 19){
+      echo "Good evening, it's ".date("G:i");
+    }
+    else {
+    }
+  }
+
+  whatTime();
+  echo "<br>";
+
+
+  $loopX = 0;
+
+  while($loopX < 100){
+    echo "Num: $loopX<br>";
+    $loopX+=10;
+  }
+
+  echo "Out of loop: ".$loopX;
+  echo "<br>";echo "<br>";
+
+  $assoc = array("Mick" => "C","John" => "F" );
+
+  echo $assoc["John"];
+
+
+
+
+  echo "<br>";echo "<br>";
+
+  $carz = array("BMW"=>"320i","Audi"=>"A3","Mercedez"=>"E53","Fiat"=>"Punto");
+
+  foreach ($carz as $element => $value){
+    echo "Brand: $element, Model: $value <br>";
+  }
+
+  echo "<br>";
+
+
+  $bikez = array ("BMW"=>"S1000RR", "Kawasaki"=>"ZX1000","Suzuki"=>"GSX-R1000", "Honda" =>"CBR 1000 RR", "Yamaha"=>"R1-M", "Ducati"=>"V4");
+    $counter = 0;
+    foreach ($bikez as $make=>$model){
+      $counter++;
+      echo "$counter ) $make: $model<br>";
+    }
+
+    echo "<br>";echo "<br>";
+
+    echo "Defult parameter";
+    echo "<br>";
+
+    function simpleGreet($name = "Andrew"){
+
+      echo "Greetings, $name";
+    }
+
+    simpleGreet("Jacob");
+    echo "<br>";
+    simpleGreet();
+
+
+
+
+
+
+
+
 
 
 
