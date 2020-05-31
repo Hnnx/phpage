@@ -20,26 +20,22 @@
   ?>
 
   <div class="block1">
-    <h5>00) Variables</h5>
 
-    <p class="codeOutput">CODE</p>
-    <p class="code">
-
-      $charName = "Pajo";<br>
-      $charAge = 50;<br>
-      <br>
-      echo "There once was a man named $charName&lt;br&gt;";<br>
-      echo "He was $charAge years old &lt;br&gt;";<br>
-      $charName = "Jajo";<br>
-      echo "He really liked the name $charName (var name changed)&lt;br&gt;";<br>
-      $charAge = 30;<br>
-      echo "But didn't like being $charAge (var age changed)"; <br>
-
-    </p>
+    <?php
+    $sectionTitle = "00) Variables";
+    $code  = "<strong class=blue>\$charName</strong> = 'Pajo';<br>
+    <strong  class=red>\$charAge</strong> = 50;<br>
     <br>
-    <p class="codeOutput">OUTPUT</p>
-    <div class="output">
+    echo 'There once was a man named <strong  class=blue>\$charName</strong>;<br>
+    echo 'He was <strong  class=red>\$charAge</strong> years old;<br>
+    <strong  class=blue>\$charName</strong> = 'Jajo';<br>
+    echo 'He really liked the name <strong class=blue>\$charName</strong> (var name changed)';<br>
+    <strong  class=red>\$charAge</strong> = 30;<br>
+    echo 'But didn't like being <strong  class=red>\$charAge</strong> (var age changed)'; <br>";
 
+    include "codeOutput.html" ?>
+
+    <div class="output">
       <?php
       $charName = "Pajo";
       $charAge = 50;
@@ -49,38 +45,40 @@
       $charName = "Jajo";
       echo "He really liked the name $charName (var name changed)<br>";
       $charAge = 30;
-      echo "But didn't like being $charAge (var age changed)"; ?>
+      echo "But didn't like being $charAge (var age changed)";
+      ?>
 
     </div>
   </div>
+
   <div class="block2">
     <h5>01) Working with Strings</h5>
 
     <p class="codeOutput">CODE</p>
     <p class="code">
 
-      $myString = "\"BIG LETTERS IN PHP\"";<br>
-      $chars = "aeiou";<br>
+      <strong class="blue">$myString</strong> = "BIG LETTERS IN PHP";<br>
+      <strong class="red">$chars</strong> = "aeiou";<br>
       <br>
-      echo strtolower($myString) . " using \"echo strtolower(\$myString)\"&lt;br&gt;&lt;br&gt;";<br>
+      echo strtolower(<strong class="blue">$myString</strong>)<br>
       <br>
-      echo "STRING LENGTH: strlen(\$myString)&lt;br&gt;";<br>
-      echo "Following string ($chars) has ".strlen($chars)." characters&lt;br&gt;&lt;br&gt;";<br>
+      echo "STRING LENGTH: strlen(<strong class="blue">$myString</strong>)";<br>
+      echo "Following string (<strong class="red">$chars</strong>) has ".strlen(<strong class="red">$chars</strong>)." characters";<br>
       <br>
-      echo "Getting first char using variable name + index (\$varName[0])&lt;br&gt;";<br>
+      echo "Getting first char using variable name + index ($varName[0])";<br>
       echo "Third letter from myString: ";<br>
-      echo $myString[3]." "."( from ".$myString." )&lt;br&gt;&lt;br&gt;";<br>
-      echo "reassign first letter using \myString[0] = F&lt;br&gt;";<br>
-      $myString[1] = "F";<br>
-      echo $myString."&lt;br&gt;&lt;br&gt;";<br>
+      echo <strong class="blue">$myString[3]</strong>." "."( from ".<strong class="blue">$myString</strong>." )";<br>
+      echo "reassign first letter using \myString[0] = F";<br>
+      <strong class="blue">$myString[1]</strong> = "F";<br>
+      echo <strong class="blue">$myString</strong>;<br>
       <br>
       echo "REPLACE: ";<br>
-      echo str_replace("FIG","small",$myString)."&lt;br&gt;&lt;br&gt;";<br>
-      echo "using str_replace(\"FIG\",\"small\",\$myString)&lt;br&gt;&lt;br&gt;";<br>
+      echo str_replace("FIG","small",<strong class="blue">$myString</strong>)";<br>
+      echo "using str_replace("FIG","small",<strong class="blue">$myString</strong>)";<br>
       <br>
       echo "SUBSTRING: ";<br>
-      echo substr($myString, 1, 4)." (myString, 0, 3)&lt;br&gt;";<br>
-      echo "using substr(\$myString, start index, end index)";<br>
+      echo substr(<strong class="blue">$myString</strong>, 1, 4)." (myString, 0, 3)";<br>
+      echo "using substr(<strong class="blue">$myString</strong>, start index, end index)";<br>
 
     </p>
     <br>
@@ -113,26 +111,38 @@
       ?>
     </div>
   </div>
-
   <div class="block1">
     <h5>02) Working with Numbers</h5>
 
-    <?php
-    echo "abs(-100) &nbsp&nbsp&nbsp&nbsp pow(2,4) &nbsp&nbsp&nbsp&nbsp  sqrt(64) &nbsp&nbsp&nbsp&nbsp  max(5,15) same as in Java<br>";
-    echo "abs:".abs(-100)." pow: ".pow(2,4)." sqrt: ". sqrt(64)." max: ". max(5,15)." min: ". min(5,15)."<br><br>";
-    ?>
-    <p class="codeOutput">CODE</p>
+        <p class="codeOutput">CODE</p>
     <p class="code">
-      $myDec = 44.77;<br><br>
-      echo "Ceil: ". ceil($myDec)."&lt;br&gt;";<br>
-      echo "Floor: ". floor($myDec)."&lt;br&gt;";<br>
-      echo "Round: ". round($myDec)."&lt;br&gt;";
+
+      echo "Absolute: abs(-22) = ". abs(-22);<br>
+      echo "Power: pow(2,4) = ". pow(2,4);<br>
+      echo "Power: 2**4 =". 2**4;<br>
+      echo "Square Root: sqrt(64) = ". sqrt(64);<br>
+      echo "Min/Max number: min(5,15) max(5,15) = ". min(5,15);<br>
+      echo "PI: pi() = ". pi();<br>
+<br>
+      <strong class="blue">$myDec</strong> = 44.77;<br><br>
+      echo "Ceil: ". ceil(<strong class="blue">$myDec</strong>)"<br>
+      echo "Floor: ". floor(<strong class="blue">$myDec</strong>)"<br>
+      echo "Round: ". round(<strong class="blue">$myDec</strong>)"<br>
     </p><br>
 
     <p class="codeOutput">OUTPUT</p>
 
     <div class="output">
       <?php
+
+      echo "Absolute: abs(-22) = ". abs(-22)."<br>";
+      echo "Power: pow(2,4) = ". pow(2,4)."<br>";
+      echo "Power: 2**4 =". 2**4 ."<br>";
+      echo "Square Root: sqrt(64) = ". sqrt(64)."<br>";
+      echo "Min/Max number: min(5,15) max(5,15) = ". min(5,15)."<br>";
+      echo "PI: pi() = ". pi()."<br>";
+
+      echo "<br>";
       $myDec = 44.77;
       echo "Ceil: ". ceil($myDec)."<br>";
       echo "Floor: ". floor($myDec)."<br>";
@@ -143,14 +153,13 @@
 
   <div class="block2">
     <h5>03) Getting input from User</h5>
-
     <p class="codeOutput">CODE</p>
     <p class="code">
 
-      &lt;input type="text" name="usernameInput" placeholder="username" size="7"&gt;<br>
-      &nbsp;&nbsp; &lt;?php echo "input: " .$_GET["usernameInput"] ;  ?&gt;<br><br>
-      &nbsp;&nbsp;&lt;input type="password" name="passwordInput" placeholder="password" size="7"&gt;<br>
-      &lt;?php echo "input: ".$_GET["passwordInput"]; ?&gt;
+      &lt;input type="text" name="<strong class="blue">usernameInput</strong>" placeholder="username" size="7"&gt;<br>
+      &nbsp;&nbsp; &lt;?php echo "input: " .$_GET["<strong class="blue">usernameInput</strong>"] ;  ?&gt;<br><br>
+      &nbsp;&nbsp;&lt;input type="password" name="<strong class="red">passwordInput</strong>" placeholder="password" size="7"&gt;<br>
+      &lt;?php echo "input: ".$_GET["<strong class="red">passwordInput</strong>"]; ?&gt;
 
     </p><br>
 
