@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="pageStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/pageStyle.css">
   <title>PHP Playground</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
   $partNum = 3;
   $partTitle = "OOP in PHP";
 
-  include "header.html" ?>
+  include "inc/header.html" ?>
 
   <div class="block2">
     <h5>16) Classes</h5>
@@ -354,7 +354,7 @@
 
         $made = "Coded";
         $stuff = "love";
-        include "footer.html" ?>
+        include "inc/footer.html" ?>
 
 
 

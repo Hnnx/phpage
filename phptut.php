@@ -8,7 +8,7 @@ $fName = "Pajo";
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="pageStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/pageStyle.css">
   <title>PHP Playground</title>
 </head>
 <body>
@@ -16,7 +16,7 @@ $fName = "Pajo";
   <?php
   $partNum = 1;
   $partTitle = "W3 Schools examples and training";
-  include "header.html"
+  include "inc/header.html"
   ?>
 <div class="block1">
 <h5>YT tutorial ~~ IN PROGRESS</h5>
@@ -291,10 +291,10 @@ $fName = "Pajo";
   <?php
   $blockX = "block1";
   $linkBack = "class.php";
-  $linkNext = "#";
+  $linkNext = "get_post.php";
   $made = "Developed";
   $stuff = "a lot of stress";
-  include "footer.html";
+  include "inc/footer.html";
    ?>
 
 </body>

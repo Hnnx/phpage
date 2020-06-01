@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="pageStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/pageStyle.css">
   <title>PHP Playground</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
   $partNum = 2;
   $partTitle = "Arrays, Loops, Functions";
 
-  include "header.html"
+  include "inc/header.html"
   ?>
 
   <div class="block1">
@@ -525,7 +525,7 @@
                   $made = "Created";<br>
                   $stuff = "love";<br>
                   date = 2020;<br>
-                  include "footer.html"<br>
+                  include "inc/footer.html"<br>
                   ?&gt;
                 </p>
 
@@ -536,7 +536,7 @@
                   $made = "Created";
                   $stuff = "<3";
                   $date = 2020;
-                  include "footer.html";
+                  include "inc/footer.html";
                   ?>
 
                 </div>
@@ -570,7 +570,7 @@
 
                     <?php
 
-                    include "phpFunc.php";
+                    include "inc/phpFunc.php";
                     pal("ZEMSOOON");
                     ?>
                   </div>
@@ -585,7 +585,7 @@
 
                 $made = "Crafted";
                 $stuff = "<3";
-                include "footer.html" ?>
+                include "inc/footer.html" ?>
 
               </body>
               </html>

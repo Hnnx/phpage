@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
   <!-- Style -->
-  <link rel="stylesheet" type="text/css" href="pageStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/pageStyle.css">
   <title>PHP Playground</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
   $partNum = 1;
   $partTitle = "First Steps";
 
-  include "header.html"
+  include "inc/header.html"
   ?>
 
   <div class="block1">
@@ -33,7 +33,7 @@
     <strong  class=red>\$charAge</strong> = 30;<br>
     echo 'But didn't like being <strong  class=red>\$charAge</strong> (var age changed)'; <br>";
 
-    include "codeOutput.html" ?>
+    include "inc/codeOutput.html" ?>
 
     <div class="output">
       <?php
@@ -413,7 +413,7 @@
 
   $made = "Created";
   $stuff = "love";
-  include "footer.html" ?>
+  include "inc/footer.html" ?>
 
 
 
