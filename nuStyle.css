@@ -1,3 +1,40 @@
 #headerSpan{
   color: red;
 }
+
+header{
+  font-family: 'Reenie Beanie', cursive;
+  text-align: center;
+  background-color: #ccbce3;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+h1{
+  font-size: 4rem;
+}
+
+#navIcon{
+  width: 120px;
+}
+
+#plan{
+  background-color: black;
+
+}
+div p{
+  margin-top: 20px;
+  height: 100px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+
+div p:hover{
+  transition: 0.4s;
+  background-color: white;
+  color: black;
+}
