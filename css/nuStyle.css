@@ -22,7 +22,8 @@ h1{
   background-color: black;
 
 }
-div p{
+
+.col-md-3 p{
   margin-top: 20px;
   height: 100px;
   width: auto;
@@ -33,7 +34,24 @@ div p{
   color: white;
 }
 
-div p:hover{
+.col-md-3 p:hover{
+  transition: 0.4s;
+  background-color: white;
+  color: black;
+}
+
+.col-md p{
+  margin-top: 20px;
+  height: 100px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+
+.col-md p:hover{
   transition: 0.4s;
   background-color: white;
   color: black;
